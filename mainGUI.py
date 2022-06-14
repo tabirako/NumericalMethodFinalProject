@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[16]:
 
 
 import tkinter as tk
 import tkinter.messagebox
 
 
-# In[2]:
+# In[17]:
 
 
 ## all unit in millimeter
@@ -22,7 +22,7 @@ speedOfSound = 345000 # mm/sec
 
 
 
-# In[3]:
+# In[18]:
 
 
 noteName = ['C','C#/Db','D','D#/Eb','E','F','F#/Gb','G','G#/Ab','A','A#/Bb','B']
@@ -30,7 +30,7 @@ interval = [2,2,1,2,2,2,1] # Major
 blist = list()
 
 
-# In[4]:
+# In[19]:
 
 
 def button_event(v):
@@ -262,13 +262,13 @@ sb.grid(column = 2, row = 1)
 #slide inside radius
 tVar = tk.DoubleVar()
 tVar.set(1.25)
-button_a = tk.Scale(win, label = 'Inner radius', orient = 'h', length=250, from_ = 0.05, to = 3, resolution = 0.05, variable = tVar)
-button_a.grid(row = 2, column = 0, columnspan = 3)
+button_t = tk.Scale(win, label = 'Wall thickness', orient = 'h', length=250, from_ = 0.01, to = 6, resolution = 0.01, variable = tVar)
+button_t.grid(row = 2, column = 0, columnspan = 3)
 
 #slide inside radius
 aVar = tk.DoubleVar()
 aVar.set(9.5)
-button_a = tk.Scale(win, label = 'Inner radius', orient = 'h', length=250, from_ = 0.1, to = 25, resolution = 0.1, variable = aVar)
+button_a = tk.Scale(win, label = 'Inner radius', orient = 'h', length=250, from_ = 0.1, to = 20, resolution = 0.1, variable = aVar)
 button_a.grid(row = 3, column = 0, columnspan = 3)
 
 #slide blow hole radius
@@ -310,14 +310,10 @@ result_text=tk.Text(win)
 result_text.grid(row = 1, column = 3,rowspan = 8, sticky="w")
 
 
-# In[5]:
+# In[20]:
 
 
 win.mainloop()
 
 
-# In[ ]:
-
-
-
-
+# 
